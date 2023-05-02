@@ -1,0 +1,50 @@
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+  <div class="card highlight-card card-small">
+
+    <span>{{ title }} app is running!</span>
+
+  </div>
+
+  <!-- Resources -->
+  <h2>Resources</h2>
+  <p>Here are some links to help you get started:</p>
+
+  <div class="card-container">
+    <textarea class="form-control" disabled value="{{ enteredText }}" style="height: 300px; width: 500px;"></textarea>
+  </div>
+  <div>
+    <button class="btn btn-outline-secondary mx-3" type="button" (click)="requestData()">
+      Request Data!
+    </button>
+  </div>
+  <div class="dflex">
+    <table style="width: 600px;">
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <th>Type</th>
+          <th>Participants</th>
+          <th>Price</th>
+          <th>Link</th>
+          <th>Key</th>
+          <th>Accessibility</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of activitiesList">
+          <td>{{ item.activity }}</td>
+          <td>{{ item.type }}</td>
+          <td>{{ item.participants }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.link }}</td>
+          <td>{{ item.key }}</td>
+          <td>{{ item.accessibility }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+  <router-outlet></router-outlet>
