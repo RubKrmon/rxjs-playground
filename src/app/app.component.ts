@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Activity } from './model/activity.model';
+import 'zone.js';
+import 'zone.js/dist/long-stack-trace-zone.js';
 
 @Component({
   selector: 'app-root',
